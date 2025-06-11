@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euro-Quest | European City Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="app-container">
+        <h1>Euro-Quest</h1>
+        <p class="subtitle">Find your perfect European city destination!</p>
+
+        <!-- Step 1: Budget -->
+        <div id="q1" class="step active">
+            <h2>What is your primary budget consideration?</h2>
+            <div class="options">
+                <button data-target="q2">Budget-Conscious</button>
+                <button data-target="q5">Flexible / High-End</button>
+            </div>
+        </div>
+
+        <!-- Path A: Budget-Conscious -->
+        <div id="q2" class="step">
+            <h2>What is the main goal of your trip?</h2>
+            <div class="options">
+                <button data-target="q3">Rich History & Culture</button>
+                <button data-target="q4">Vibrant Nightlife & Fun</button>
+            </div>
+        </div>
+
+        <div id="q3" class="step">
+            <h2>What kind of climate do you prefer?</h2>
+            <div class="options">
+                <button data-target="result1">Warm & Sunny</button>
+                <button data-target="result2">Cooler & Classic Charm</button>
+            </div>
+        </div>
+
+        <div id="q4" class="step">
+            <h2>What kind of party scene are you looking for?</h2>
+            <div class="options">
+                <button data-target="result3">Big City Energy</button>
+                <button data-target="result4">Unique & Alternative</button>
+            </div>
+        </div>
+
+        <!-- Path B: Flexible Budget -->
+        <div id="q5" class="step">
+            <h2>What time of year are you traveling?</h2>
+            <div class="options">
+                <button data-target="q6">Peak Season (Summer)</button>
+                <button data-target="q7">Off-Season (Fall/Winter)</button>
+            </div>
+        </div>
+
+        <div id="q6" class="step">
+            <h2>What's your desired summer vacation pace?</h2>
+            <div class="options">
+                <button data-target="result5">Fast-Paced & Iconic</button>
+                <button data-target="result6">Relaxed & Luxurious</button>
+            </div>
+        </div>
+
+        <div id="q7" class="step">
+            <h2>What is your off-season priority?</h2>
+            <div class="options">
+                <button data-target="result7">Fewer Crowds at Landmarks</button>
+                <button data-target="q8">Cozy Indoor Culture</button>
+            </div>
+        </div>
+        
+        <div id="q8" class="step">
+            <h2>What's your preferred cultural vibe?</h2>
+            <div class="options">
+                <button data-target="result8">Imperial Grandeur</button>
+                <button data-target="result9">Artistic & Quaint</button>
+            </div>
+        </div>
+
+        <!-- --- RESULTS --- -->
+        <div id="result1" class="step result">
+            <h2>Recommendation: Sunny & Historic</h2>
+            <p>These cities offer incredible history, delicious food, and sunshine at a great value.</p>
+            <ul>
+                <li>Lisbon, Portugal</li>
+                <li>Seville, Spain</li>
+                <li>Athens, Greece</li>
+            </ul>
+            <button class="reset-btn">Start Over</button>
+        </div>
+
+        <div id="result2" class="step result">
+            <h2>Recommendation: Fairytale Charm</h2>
+            <p>These cities are famous for their stunning architecture, hearty food, and affordable prices.</p>
+            <ul>
+                <li>Prague, Czech Republic</li>
+                <li>Budapest, Hungary</li>
+                <li>Krakow, Poland</li>
+            </ul>
+            <button class="reset-btn">Start Over</button>
+        </div>
+
+        <div id="result3" class="step result">
+            <h2>Recommendation: World-Class Nightlife</h2>
+            <p>For a massive, world-renowned scene with endless options, look no further.</p>
+            <ul>
+                <li>Berlin, Germany</li>
+                <li>Madrid, Spain</li>
+            </ul>
+            <button class="reset-btn">Start Over</button>
+        </div>
+
+        <div id="result4" class="step result">
+            <h2>Recommendation: Alternative Party Scene</h2>
+            <p>Explore something less mainstream with a unique, creative, and gritty vibe.</p>
+            <ul>
+                <li>Belgrade, Serbia</li>
+                <li>Warsaw, Poland</li>
+            </ul>
+            <button class="reset-btn">Start Over</button>
+        </div>
+
+        <div id="result5" class="step result">
+            <h2>Recommendation: Iconic Summer Capitals</h2>
+            <p>These buzzing megacities are home to the world's most famous landmarks and museums.</p>
+            <ul>
+                <li>Paris, France</li>
+                <li>London, England</li>
+            </ul>
+            <button class="reset-btn">Start Over</button>
+        </div>
+
+        <div id="result6" class="step result">
+            <h2>Recommendation: Luxurious Summer Coastlines</h2>
+            <p>Perfect for unwinding in a beautiful, high-end setting. Think beach clubs and exquisite dining.</p>
+            <ul>
+                <li>Nice, France</li>
+                <li>Amalfi Coast, Italy</li>
+            </ul>
+            <button class="reset-btn">Start Over</button>
+        </div>
+
+        <div id="result7" class="step result">
+            <h2>Recommendation: Classic Sights, No Crowds</h2>
+            <p>See the "big ticket" landmarks in the off-season for a more intimate and authentic experience.</p>
+            <ul>
+                <li>Rome, Italy</li>
+                <li>Florence, Italy</li>
+            </ul>
+            <button class="reset-btn">Start Over</button>
+        </div>
+
+        <div id="result8" class="step result">
+            <h2>Recommendation: Imperial & Elegant</h2>
+            <p>Enjoy majestic palaces, opulent opera houses, and grand cafes in these sophisticated cities.</p>
+            <ul>
+                <li>Vienna, Austria</li>
+                <li>Zurich, Switzerland</li>
+            </ul>
+            <button class="reset-btn">Start Over</button>
+        </div>
+
+        <div id="result9" class="step result">
+            <h2>Recommendation: Artistic & Charming</h2>
+            <p>These cities are famous for picturesque canals, world-class art, and a cozy "hygge" culture.</p>
+            <ul>
+                <li>Amsterdam, Netherlands</li>
+                <li>Copenhagen, Denmark</li>
+            </ul>
+            <button class="reset-btn">Start Over</button>
+        </div>
+
+    </main>
+
+</body>
+</html>
